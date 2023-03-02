@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+}
+
+div {
+    height: 80px;
+    background: #000;
+    position: relative;
+}
+
+div ul {
+    margin-left: 70px;
+}
+
+div ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 60px;
+    line-height: 80px;
+    position: relative;
+}
+
+div ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+
+/* after me content lagana jarrori hai */
+
+li::after {
+    content: "";
+    height: 6px;
+    width: 0px;
+    background: #2fdab8;
+    position: absolute;
+    top: 245%;
+    left: -10px;
+    transition: 1s;
+}
+
+li:hover::after {
+    width: 130%;
+}
+
+div::after {
+    content: "";
+    height: 80px;
+    width: 200px;
+    background: #2fdab8;
+    position: absolute;
+    top: 0;
+    left: 1050px;
+}
