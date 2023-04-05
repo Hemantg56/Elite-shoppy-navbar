@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-    /* margin: 0;
-    padding: 0; */
+    margin: 0;
+    padding: 0;
 }
 
-div {
+.main {
     height: 80px;
     background: #000;
     position: relative;
@@ -14,7 +14,7 @@ div ul {
     margin-left: 70px;
 }
 
-div ul li {
+div ul .lis {
     list-style: none;
     display: inline;
     margin-right: 60px;
@@ -22,7 +22,7 @@ div ul li {
     position: relative;
 }
 
-div ul li a {
+div ul .lis a {
     color: #fff;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -32,7 +32,7 @@ div ul li a {
 
 /* after me content lagana jarrori hai */
 
-li::after {
+.lis::after {
     content: "";
     height: 6px;
     width: 0px;
@@ -43,16 +43,76 @@ li::after {
     transition: 1s;
 }
 
-li:hover::after {
+.lis:hover::after {
     width: 130%;
 }
 
-div::after {
-    content: "";
+.main .bor {
     height: 80px;
     width: 200px;
     background: #2fdab8;
     position: absolute;
+    top: 0px;
+    left: 1060px;
+}
+
+ul .lis .men {
+    height: 370px;
+    width: 780px;
+    background-color: green;
+    position: absolute;
+    top: 48px;
+    left: -173px;
+    padding: 35px 0 0 50px;
+    display: flex;
+}
+
+ul .lis .men .im {
+    height: 300px;
+    width: 300px;
+    background: url(image/top2.jpg);
+    box-shadow: 0 0 10px rgb(99, 98, 98);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+ul .lis .men .im::after {
+    content: "";
+    height: 300px;
+    width: 300px;
+    background-color: rgb(87, 86, 86);
+    position: absolute;
+    top: -300px;
+    left: 300px;
+    opacity: 0.1;
+    transition: 1s;
+}
+
+ul .lis .men .im:hover::after {
     top: 0;
-    left: 1050px;
+    left: 0;
+}
+
+ul .lis .men .im::before {
+    content: "";
+    height: inherit;
+    width: inherit;
+    background-color: rgb(87, 86, 86);
+    position: absolute;
+    top: 300px;
+    left: -300px;
+    opacity: 0.1;
+    transition: 1s;
+}
+
+ul .lis .men .im:hover::before {
+    top: 0px;
+    left: 0px;
+}
+
+ul .lis .men .text {
+    height: 300px;
+    width: 50%;
+    background-color: blueviolet;
 }
